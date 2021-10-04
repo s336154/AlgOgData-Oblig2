@@ -206,19 +206,19 @@ public class DobbeltLenketListe<T> implements Liste<T>
                 {
                     Objects.requireNonNull(verdi, "Ikke tillatt med null-verdier!");
 
-                        Node<T> q = new Node<>(verdi);
-               
+                        Node<T> n = new Node<>(verdi);
+
 
                     if ( (hode == null) && (hale == null) ) {
-                        hode = q;
-                        hale = q;
+                        hode = n;
+                        hale = n;
                         antall += 1;
                     }
                     else {
                         Node p = hale;
-                        hale = q;
-                        q.forrige = p;
-                        p.neste = q;
+                        hale = n;
+                        n.forrige = p;
+                        p.neste = n;
                        antall += 1;
                     }
 
