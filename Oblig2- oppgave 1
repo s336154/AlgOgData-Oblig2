@@ -1,0 +1,23 @@
+
+    @Override
+    public int antall() // oppgave 1
+    {
+        return antall;
+    }
+
+    @Override
+    public boolean tom() // oppgave 1
+    {
+        return antall == 0; // listen er tom hvis antall er 0;
+    }
+
+    // konstruktør
+    public DobbeltLenketListe(T [] a) //oppgave 1
+    {
+        Objects.requireNonNull(a);
+
+     //   this(a.length); // kaller den andre konstruktøren
+        for (T verdi : a)
+        {
+            if (verdi != null) a[antall++] = verdi;
+        } }
